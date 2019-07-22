@@ -1,0 +1,1 @@
+setopt APPEND_HISTORY
