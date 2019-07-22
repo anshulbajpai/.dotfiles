@@ -9,4 +9,5 @@ if [ -f ~/.bash_env ]; then
 . ~/.bash_env
 fi
 
-. $HOME/.asdf/completions/asdf.bash
+echo -e '\n. $(brew --prefix asdf)/asdf.sh' >> ~/.zshrc
+echo -e '\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash' >> ~/.zshrc
