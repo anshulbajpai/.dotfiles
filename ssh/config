@@ -1,15 +1,17 @@
-Host *
+Host github
  AddKeysToAgent yes
  UseKeychain yes 
-
-Host github
  HostName github.com
  IdentityFile ~/.ssh/github
 
 Host bitbucket
+ AddKeysToAgent yes
+ UseKeychain yes 
  HostName bitbucket.org
  IdentityFile ~/.ssh/bitbucket	
 
 Host disney
+ AddKeysToAgent yes
+ UseKeychain yes 
  HostName github.bamtech.co
  IdentityFile ~/.ssh/disney	
