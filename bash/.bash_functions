@@ -9,7 +9,7 @@ function upgrade_brew() {
 
 function ask_upgrade_brew() {
     while true; do
-        read -p "Do you wish to upgrade brew? (Y/N)" yn
+        read "yn?Do you wish to upgrade brew? (Y/N)"
         case $yn in
             [Yy]* ) upgrade_brew; break;;
             [Nn]* ) exit;;
@@ -17,3 +17,5 @@ function ask_upgrade_brew() {
         esac
     done
 }
+
+ask_upgrade_brew
