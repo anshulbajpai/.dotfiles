@@ -14,7 +14,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status aws)
 POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME="powerlevel10k/powerlevel10k"
-source ~/.fonts/*.sh
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
