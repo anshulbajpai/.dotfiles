@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 function upgrade_brew() {
         brew update
         brew upgrade
@@ -8,14 +7,19 @@ function upgrade_brew() {
 }
 
 function ask_upgrade_brew() {
-    while true; do
         read "yn?Do you wish to upgrade brew? (Y/N)"
         case $yn in
-            [Yy]* ) upgrade_brew; break;;
-            [Nn]* ) exit;;
+            [Yy]* ) upgrade_when_day_is_divisible_by5;; 
+            [Nn]* ) ;;
             * ) echo "Please answer yes or no.";;
         esac
-    done
 }
 
-#ask_upgrade_brew
+function upgrade_brew_when_day_is_divisible_by5() {
+	day=$(date +"%d")
+	if ! (( $day % 5 )) ; then
+		ask_upgrade_brew
+	fi	 
+}
+
+upgrade_brew_when_day_is_divisible_by5
