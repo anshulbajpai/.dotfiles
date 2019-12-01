@@ -18,4 +18,4 @@ function ask_upgrade_brew() {
     done
 }
 
-ask_upgrade_brew
+#ask_upgrade_brew
