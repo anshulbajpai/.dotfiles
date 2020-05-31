@@ -30,6 +30,12 @@ function upgrade_brew_when_day_is_divisible_by5() {
 	fi	 
 }
 
-upgrade_brew_when_day_is_divisible_by5
+function plex_start() {		
+	nohup caffeinate -i -m /Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Server &
+}
 
-upgrade_oh_my_zsh
+function plex_stop(){
+	killall -m "Plex Media Server$"	 
+}
+
+upgrade_brew_when_day_is_divisible_by5
