@@ -11,7 +11,7 @@
 	helper = osxkeychain
 [core]
 	autocrlf = input
-	pager = cat
+	pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Dracula'
 [rerere]
 	enabled = true
 [rebase]
@@ -23,3 +23,5 @@
 [pager]
 	diff = true
 	log = true
+[interactive]
+    diffFilter = delta --color-only

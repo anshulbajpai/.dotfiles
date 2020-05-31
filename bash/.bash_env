@@ -1,3 +1,6 @@
 #!/bin/bash
 
 export SBT_OPTS="$SBT_OPTS -Xms256m -Xmx2048m -XX:ReservedCodeCacheSize=256m -XX:MaxMetaspaceSize=1536m"
+export FZF_DEFAULT_OPTS='-e --height 40% --layout=reverse --border'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME="Dracula"
