@@ -31,3 +31,5 @@ function upgrade_brew_when_day_is_divisible_by5() {
 }
 
 upgrade_brew_when_day_is_divisible_by5
+
+upgrade_oh_my_zsh
