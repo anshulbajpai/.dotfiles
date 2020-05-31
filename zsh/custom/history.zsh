@@ -1,1 +1,1 @@
-setopt APPEND_HISTORY
+unsetopt share_history

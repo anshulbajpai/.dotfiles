@@ -9,16 +9,24 @@ function upgrade_brew() {
 function ask_upgrade_brew() {
         read "yn?Do you wish to upgrade brew? (Y/N)"
         case $yn in
-            [Yy]* ) upgrade_when_day_is_divisible_by5;; 
+            [Yy]* ) upgrade_brew;; 
             [Nn]* ) ;;
             * ) echo "Please answer yes or no.";;
         esac
 }
 
 function upgrade_brew_when_day_is_divisible_by5() {
+	FILE=/tmp/asked
 	day=$(date +"%d")
 	if ! (( $day % 5 )) ; then
-		ask_upgrade_brew
+		if test -f "$FILE"; then
+		
+		else
+			touch $FILE
+			ask_upgrade_brew
+		fi
+	else
+		rm -f $FILE
 	fi	 
 }
 

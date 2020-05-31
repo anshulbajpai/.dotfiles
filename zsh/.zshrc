@@ -73,7 +73,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf aws brew docker docker-compose dotenv vscode git-extras gradle history common-aliases last-working-dir mvn node npm sbt scala vagrant zsh-syntax-highlighting zsh-autosuggestions z colorize colored-man-pages) 
+plugins=(asdf fzf git aws brew docker docker-compose dotenv vscode git-extras gradle history common-aliases last-working-dir mvn node npm sbt scala vagrant zsh-syntax-highlighting zsh-autosuggestions z colorize colored-man-pages) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,7 +82,6 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.bash_profile ]; then
 . ~/.bash_profile
 fi
-
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -107,3 +106,5 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
