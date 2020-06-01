@@ -41,7 +41,7 @@ function git(){
 }
 
 function plex_start() {		
-	nohup caffeinate -i -m /Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Server &
+	nohup caffeinate -i -m /Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Server </dev/null >/dev/null 2>&1 & 
 }
 
 function plex_stop(){
