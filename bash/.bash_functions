@@ -30,16 +30,6 @@ function upgrade_brew_when_day_is_divisible_by5() {
 	fi	 
 }
 
-function git(){
-	if [ $# -gt 0 ] && ([ "$1" = "status" ] || [ "$1" = "branch" ] || [ "$1" = "log" ] || [ "$1" = "reflog" ] || [ "$1" = "diff" ]) ; then
-		COMMAND="$1"
-		shift
-		command git fuzzy $COMMAND "$@"
-  	else
-		command git "$@"
-  	fi
-}
-
 function plex_start() {		
 	nohup caffeinate -i -m /Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Server </dev/null >/dev/null 2>&1 & 
 }
