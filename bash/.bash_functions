@@ -48,4 +48,8 @@ function plex_stop(){
 	killall -m "Plex Media Server$"	 
 }
 
+function ejectHdd(){
+	diskutil umount /Volumes/My\ Passport
+}
+
 upgrade_brew_when_day_is_divisible_by5
