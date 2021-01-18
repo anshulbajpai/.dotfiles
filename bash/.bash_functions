@@ -3,6 +3,10 @@
 function upgrade_brew() {
         brew update
         brew upgrade
+	brew upgrade --cask
+	brew cleanup
+	brew cleanup cask
+	brew autoremove
         brew doctor
 }
 
@@ -28,18 +32,6 @@ function upgrade_brew_when_day_is_divisible_by5() {
 	else
 		rm -f $FILE
 	fi	 
-}
-
-function plex_start() {		
-	nohup caffeinate -i -m /Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Server </dev/null >/dev/null 2>&1 & 
-}
-
-function plex_stop(){
-	killall -m "Plex Media Server$"	 
-}
-
-function ejectHdd(){
-	diskutil umount /Volumes/My\ Passport
 }
 
 upgrade_brew_when_day_is_divisible_by5

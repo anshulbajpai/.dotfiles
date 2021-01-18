@@ -14,6 +14,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status aws)
 POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -73,7 +74,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vscode thefuck alias-finder httpie gitignore  command-not-found bgnotify asdf fzf git aws brew extract fd docker docker-compose dotenv vscode git-extras gradle history common-aliases last-working-dir mvn node npm sbt scala vagrant zsh-syntax-highlighting zsh-autosuggestions z colorize colored-man-pages) 
+plugins=(ansible vscode thefuck alias-finder httpie gitignore  command-not-found bgnotify asdf fzf git aws brew extract fd docker docker-compose dotenv vscode git-extras gradle history common-aliases last-working-dir mvn node npm sbt scala vagrant zsh-syntax-highlighting zsh-autosuggestions z colorize colored-man-pages ripgrep) 
 
 source $ZSH/oh-my-zsh.sh
 

@@ -15,3 +15,5 @@ fi
 if [ -f ~/.bash_env ]; then
 . ~/.bash_env
 fi
+
+export PATH="$HOME/.poetry/bin:$PATH"

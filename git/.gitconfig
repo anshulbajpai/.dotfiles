@@ -1,6 +1,7 @@
 [user]
-	name = Anshul Bajpai
-	email = bajpai.anshul@gmail.com
+	name = anshulbajpai
+	email = 291429+anshulbajpai@users.noreply.github.com
+	signingkey = B1C9767E0F84C4FE76A5D2E50B49E89F187B9795
 [color]
 	diff = auto
 	status = auto
@@ -16,6 +17,7 @@
 	enabled = true
 [rebase]
 	autostash = true
+	autosquash = true
 [diff]
 	submodule = log
 [status]
@@ -25,3 +27,13 @@
 	log = true
 [interactive]
     diffFilter = delta --color-only
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
+[alias]
+	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
