@@ -3,9 +3,7 @@
 function upgrade_brew() {
         brew update
         brew upgrade
-	brew upgrade --cask
 	brew cleanup
-	brew cleanup cask
 	brew autoremove
         brew doctor
 }

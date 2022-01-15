@@ -1,13 +1,13 @@
 [user]
-	name = anshulbajpai
+	name = Anshul Bajpai
 	email = 291429+anshulbajpai@users.noreply.github.com
-	signingkey = B1C9767E0F84C4FE76A5D2E50B49E89F187B9795
+	signingkey = 1B3FDAEB940FF140
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 [push]
-	default = simple
+	default = current
 [credential]
 	helper = osxkeychain
 [core]
@@ -34,6 +34,13 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /usr/local/MacGPG2/bin/gpg
 [alias]
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[init]
+	defaultBranch = main

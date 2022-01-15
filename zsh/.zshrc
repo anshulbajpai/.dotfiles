@@ -74,16 +74,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible vscode thefuck alias-finder httpie gitignore  command-not-found bgnotify asdf fzf git aws brew extract fd docker docker-compose dotenv vscode git-extras gradle history common-aliases last-working-dir mvn node npm sbt scala vagrant zsh-syntax-highlighting zsh-autosuggestions z colorize colored-man-pages ripgrep) 
+plugins=(ansible vscode thefuck alias-finder httpie gitignore command-not-found bgnotify fzf git aws brew extract fd docker docker-compose dotenv vscode git-extras gradle history common-aliases last-working-dir mvn node npm sbt scala vagrant zsh-syntax-highlighting zsh-autosuggestions z colorize colored-man-pages ripgrep terraform) 
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 if [ -f ~/.bash_profile ]; then
 . ~/.bash_profile
 fi
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -109,3 +107,4 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+. /usr/local/opt/asdf/libexec/asdf.sh
